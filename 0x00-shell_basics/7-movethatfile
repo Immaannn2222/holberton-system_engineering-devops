@@ -1,2 +1,2 @@
 #!/bin/bash
-mv file  drectory
+mv /tmp/ /tmp/holberton 
