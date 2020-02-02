@@ -1,1 +1,2 @@
-LERNING BASIC SHELL PERMSSION!! leveling up
+#!/bin/bash
+LEARNING SHELL tricks !! 
