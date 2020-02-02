@@ -1,0 +1,1 @@
+SHELL redirections: input and outputs, special characters
