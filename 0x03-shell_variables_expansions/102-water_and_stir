@@ -1,3 +1,2 @@
 #!/bin/bash
-
-echo $((export "WATER=water"+"STIR=stir")) "behlnort"  
+echo "export" $((WATER="water"+STIR="stir"))="behlnort"  
