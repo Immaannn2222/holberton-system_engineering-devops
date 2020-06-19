@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#FizzBuzz
+
+
+for i in {1..100};
+do
+    n=$((i % 3))
+    m=$((i % 5))
+    if [ $n -eq 0 ] && [ $m -eq 0 ]
+    then
+        echo "FizzBuzz"
+    elif [ $n -eq 0 ]
+    then
+        echo "Fizz"
+    elif [ $m -eq 0 ]
+    then
+        echo "Buzz"
+    else
+        echo "$i"
+    fi
+
+done
