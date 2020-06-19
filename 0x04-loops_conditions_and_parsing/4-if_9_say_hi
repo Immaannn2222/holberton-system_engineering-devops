@@ -3,7 +3,7 @@
 i=1
 until [ $i -le 11 ]
 do
-if [ $i == 10 ]
+if [ $i = 10 ]
 then
 echo "Hi"
 else
