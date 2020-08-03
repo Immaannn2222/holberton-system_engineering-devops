@@ -1,12 +1,12 @@
 
-# This project is simply a set of tasks to familiarize you with the basic level syntaxof puppet.
+## This project is simply a set of tasks to familiarize you with the basic level syntax of puppet.
 
 ## Tasks
-0.  Create a file
+### 0.  Create a file
 Using Puppet, create a file in /tmp.
 
-1. Install a package
+### 1. Install a package
 Using Puppet, install puppet-lint.
 
-2. Execute a command
+### 2. Execute a command
 Using Puppet, create a manifest that kills a process named killmenow
