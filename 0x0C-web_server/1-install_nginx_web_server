@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Bash script that configures a new Ubuntu machine to respect requirements
+sudo apt-get -y update
+sudo apt-get -y install nginx
