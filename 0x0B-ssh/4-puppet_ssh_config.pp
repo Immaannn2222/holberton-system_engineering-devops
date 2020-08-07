@@ -1,4 +1,4 @@
-#Connect to a server without typing a password(Puppet)
+# Connect to a server without typing a password(Puppet)
 file_line {'Turn off passwd auth':
 ensure => 'present'
 path   => '/etc/ssh/ssh_config',
