@@ -1,4 +1,4 @@
-#Connect to a server without typing a password(Puppet)
+# Connect to a server without typing a password(Puppet)
 
 file_line { 'Create_identity_file':
 ensure => 'present',
