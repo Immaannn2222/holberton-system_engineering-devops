@@ -5,5 +5,5 @@ sudo apt-get -y install nginx
 sudo chmod 777 /var/www/html/index.nginx-debian.html
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
 sudo service nginx start
-sudo sed -i "43i \\\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=oavMtUWDBTM;\n}" /etc/nginx/sites-available/default
+sudo sed -i "43i \\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=oavMtUWDBTM;\n}\n" /etc/nginx/sites-available/default
 sudo service nginx restart
