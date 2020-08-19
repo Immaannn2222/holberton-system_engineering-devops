@@ -1,0 +1,19 @@
+ #!/usr/bin/env bash
+ #Configure your domain zone so that the subdomain www points to your load-balancer IP
+
+dig-it()
+{
+    command=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | tail -n1)
+    echo "$command $2" | awk '{ print "The subdomain " $6 " is a " $4 " record and points to " $5 }'
+}
+
+if [ "$#" -eq 1 ]
+then
+    dig-it $1 "www"
+    dig-it $1 "lb-01"
+    dig-it $1 "web-01"
+    dig-it $1 "web-02"
+elif [ "$#" -gt 1 ]
+then
+    dig-it $1 $2
+fi
