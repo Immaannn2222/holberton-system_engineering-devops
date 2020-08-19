@@ -1,5 +1,5 @@
- #!/usr/bin/env bash
- #Configure your domain zone so that the subdomain www points to your load-balancer IP
+#!/usr/bin/env bash
+# Configure your domain zone so that the subdomain www points to your load-balancer IP
 
 dig-it()
 {
