@@ -14,6 +14,6 @@ printf %s "server {
         return 301 http://youtube.com/watch?v=QH2-TGUlwu4;
     }
 }" > /etc/nginx/sites-available/default;
-sudo service nginx start',
+sudo service nginx start;',
 provider => shell,
 }
