@@ -4,7 +4,23 @@ exec {'install':
 command  => 'sudo apt-get -y update;
 sudo apt-get -y install nginx;
 sudo chmod 777 /var/www/html/index.nginx-debian.html;
+sudo chmod 777 /var/www/html/404.html;
 echo "Holberton School" > /var/www/html/index.nginx-debian.html;
-sudo service nginx start',
+echo "Ceci n'est pas une page" > /var/www/html/404.html;
+printf %s "server {
+    listen 80;
+    listen [::]:80 default_server;
+    root   /var/www/html;
+    index  index.html index.htm;
+    location /redirect_me {
+        return 301 http://youtube.com/watch?v=QH2-TGUlwu4;
+    }
+    error_page 404 /404.html;
+    location = /404.html{
+        internal;
+    }
+}" > /etc/nginx/sites-available/default;
+sudo service nginx restart;
+',
 provider => shell,
 }
