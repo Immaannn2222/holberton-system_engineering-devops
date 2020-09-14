@@ -14,7 +14,7 @@ if __name__ == "__main__":
     list_json = to_do.json()
     user_json = user.json()
     for i in user_json:
-        name = i.get("name")
+        name = i.get("username")
         i_d = i.get('id')
     with open(str(i_d) + '.csv', mode='w') as f:
         csv = csv.writer(f, delimiter=',', quoting=csv.QUOTE_ALL)
