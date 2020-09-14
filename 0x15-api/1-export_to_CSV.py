@@ -16,10 +16,9 @@ if __name__ == "__main__":
     for i in user_json:
         name = i.get("name")
         i_d = i.get('id')
-    for t in list_json:
-        status = t.get("completed")
-        task_title = t.get("title")
-        filename = str(i_d) + ".csv"
-    with open(filename, mode='w') as f:
+    with open(str(i_d) + '.csv', mode='w') as f:
         csv = csv.writer(f, delimiter=',', quoting=csv.QUOTE_ALL)
-        csv.writerow([id, name, status, task_title])
+        for t in list_json:
+            status = t.get("completed")
+            task_title = t.get("title")
+            csv.writerow([i_d, name, status, task_title])
