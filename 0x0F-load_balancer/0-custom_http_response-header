@@ -11,5 +11,5 @@ echo "server {
     index index.nginx-debian.html index.nginx-debian.html;
     add_header X-Served-By $HOSTNAME;                    
                                                                      
-}" > /etc/nginx/sites-available/default
+}" >> /etc/nginx/sites-available/default
 sudo service nginx restart
